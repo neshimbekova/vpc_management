@@ -1,1 +1,2 @@
-# vpc_management
+# terraform
+terraform apply --var-file=vpc.tfvars
