@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "terraform-state-january-kuku"
-    key    = "insfra.state"
+    key    = "infra.state"
     region = "eu-west-1"
   }
 }
