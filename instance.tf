@@ -3,6 +3,7 @@ resource "aws_instance" "web" {
   instance_type = "${var.instance_type}"
   count         = "${var.count}"
   key_name      = "${var.key_name}"
+  subnet_id = "${aws_subnet.dev1.id}"
 
   tags {
     name       = "terraform-${var.created_by }-${count.index +1}"
