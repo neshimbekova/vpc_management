@@ -21,3 +21,13 @@ max_size = 12
 desired_capacity = 3
 
 dbname = "MySQL"
+
+dbmin_size = 1
+
+dbmax_size = 12
+
+dbdesired_capacity = 3
+
+db_ami = "ami-07683a44e80cd32c5"
+
+db_instance_type = "t2.micro"

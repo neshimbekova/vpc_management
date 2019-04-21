@@ -14,11 +14,12 @@ module "dbasg" {
   asg_name                    = "example-asg"
   vpc_zone_identifier         = ["${aws_subnet.dev2.id}"]
   health_check_type           = "EC2"
-  min_size                    = "${var.min_size}"
-  max_size                    = "${var.max_size}"
-  desired_capacity            = "${var.desired_capacity}"
+  min_size                    = "${var.dbmin_size}"
+  max_size                    = "${var.dbmax_size}"
+  desired_capacity            = "${var.dbdesired_capacity}"
   wait_for_capacity_timeout   = 0
   associate_public_ip_address = "true"
+  user_data                   = "${file("userdata.sh")}"
 
   #   tags {
   #     name       = "terraform-${var.created_by }-${count.index +1}"
