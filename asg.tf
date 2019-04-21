@@ -19,10 +19,10 @@ module "asg" {
   desired_capacity          = "${var.desired_capacity}"
   wait_for_capacity_timeout = 0
 
-#   tags {
-#     name       = "terraform-${var.created_by }-${count.index +1}"
-#     env        = "${var.env}"
-#     dept       = "${var.dept}"
-#     created_by = "${var.created_by}"
-#   }
-# }
+  #   tags {
+  #     name       = "terraform-${var.created_by }-${count.index +1}"
+  #     env        = "${var.env}"
+  #     dept       = "${var.dept}"
+  #     created_by = "${var.created_by}"
+  #   }
+}
