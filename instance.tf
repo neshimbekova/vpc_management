@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids      = ["${aws_security_group.allow_ssh.id}"]
 
   tags {
-    name       = "terraform-${var.created_by }-${count.index +1}"
+    Name       = "terraform-${var.created_by }-${count.index +1}"
     env        = "${var.env}"
     dept       = "${var.dept}"
     created_by = "${var.created_by}"
