@@ -8,7 +8,7 @@ module "dbasg" {
 
   image_id        = "${var.ami}"
   instance_type   = "${var.instance_type}"
-  security_groups = ["${aws_security_group.allow_ssh.id}"]
+  security_groups = ["${aws_security_group.allow_mysql.id}"]
 
   # Auto scaling group
   asg_name                    = "example-asg"
